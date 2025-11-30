@@ -18,19 +18,21 @@
    Tailwind scans your files and only includes utilities you actually use (tree-shaking) */
 @tailwind utilities;
 
+
+
 /* ============================================
    CUSTOM STYLES
    ============================================ */
 
 /* Custom styles that complement Tailwind - styles that can't be easily done with utility classes */
 body {
-  /* Custom background gradient using CSS gradient
+   /* Custom background gradient using CSS gradient
      Alternative: Could use Tailwind's bg-gradient-to-r classes, but keeping custom for example */
-  background: linear-gradient(135deg, #0b35ed 0%, #764ba2 100%);
-  
-  /* Font smoothing for better text rendering on different operating systems */
-  -webkit-font-smoothing: antialiased;  /* Smooth fonts on macOS/iOS (WebKit browsers) */
-  -moz-osx-font-smoothing: grayscale;   /* Smooth fonts on macOS (Firefox) */
+   background: linear-gradient(135deg, #0b35ed 0%, #764ba2 100%);
+
+   /* Font smoothing for better text rendering on different operating systems */
+   -webkit-font-smoothing: antialiased;
+   /* Smooth fonts on macOS/iOS (WebKit browsers) */
+   -moz-osx-font-smoothing: grayscale;
+   /* Smooth fonts on macOS (Firefox) */
 }
-
-
