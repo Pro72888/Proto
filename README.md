@@ -23,3 +23,11 @@ npm run dev
 - Click the button to see a message appear
 - Clean and modern UI
 - Responsive design
+
+to get history, git log
+
+once changes are ready, do following:
+git add (. means all files), file name
+
+git commit -m "comment here"
+git push (to push changes into server)
