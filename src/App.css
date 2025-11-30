@@ -1,58 +1,35 @@
-.app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  gap: 20px;
-  padding: 20px;
-}
+/* Global styles with Tailwind CSS directives and custom body styles */
+/* ============================================
+   TAILWIND CSS DIRECTIVES
+   ============================================ */
 
-h1 {
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  margin: 0;
-}
+/* @tailwind base - Injects Tailwind's base styles (reset/normalize styles)
+   This includes things like: margin reset, box-sizing, etc.
+   Similar to CSS reset, but Tailwind's version */
+@tailwind base;
 
-.button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
-}
+/* @tailwind components - Injects Tailwind's component classes
+   This is where custom component classes would go if you define them
+   In this project, we're not using custom components, so this is mostly empty */
+@tailwind components;
 
-.button:hover {
-  background-color: #0056b3;
-}
+/* @tailwind utilities - Injects all Tailwind utility classes
+   This is where classes like 'flex', 'bg-blue-600', 'text-center' come from
+   Tailwind scans your files and only includes utilities you actually use (tree-shaking) */
+@tailwind utilities;
 
-.button:active {
-  background-color: #004085;
-  transform: scale(0.98);
-}
+/* ============================================
+   CUSTOM STYLES
+   ============================================ */
 
-.message {
-  color: #28a745;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Custom styles that complement Tailwind - styles that can't be easily done with utility classes */
+body {
+  /* Custom background gradient using CSS gradient
+     Alternative: Could use Tailwind's bg-gradient-to-r classes, but keeping custom for example */
+  background: linear-gradient(135deg, #0b35ed 0%, #764ba2 100%);
+  
+  /* Font smoothing for better text rendering on different operating systems */
+  -webkit-font-smoothing: antialiased;  /* Smooth fonts on macOS/iOS (WebKit browsers) */
+  -moz-osx-font-smoothing: grayscale;   /* Smooth fonts on macOS (Firefox) */
 }
 

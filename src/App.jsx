@@ -1,23 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+// Router component that manages page navigation between First and Second pages
+import { useState } from 'react'; 
+import First from './First'
+import Second from './Second'
 
 function App() {
-  const [message, setMessage] = useState('')
+  const [currentPage, setCurrentPage] = useState('first')
 
-  const handleButtonClick = () => {
-    setMessage('Button is pressed!')
+  if (currentPage === 'second') {
+    return <Second setCurrentPage={setCurrentPage} />
+  }
+  // default (or 'first')
+  else {
+    return <First setCurrentPage={setCurrentPage} />
   }
 
-  return (
-    <div className="app">
-      <h1>Simple React App</h1>
-      <button onClick={handleButtonClick} className="button">
-        Press Me
-      </button>
-      {message && <p className="message">{message}</p>}
-    </div>
-  )
 }
-
 export default App
 
