@@ -1,6 +1,6 @@
 function First({ setCurrentPage }) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-8 p-5">
+    <div className="flex flex-col items-center justify-centergap-8 p-5">
       <h1 className="text-white text-7xl font-semibold">
         Prototype
       </h1>
@@ -10,7 +10,7 @@ function First({ setCurrentPage }) {
         className="
           px-8 py-3 
           bg-blue-600 hover:bg-blue-700
-          text-white text-2xl font-medium
+          text-white text-2xl font-large
           rounded-2xl 
           transition
         "
