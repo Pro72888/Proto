@@ -33,3 +33,5 @@ body {
   -moz-osx-font-smoothing: grayscale;   /* Smooth fonts on macOS (Firefox) */
 }
 
+
+## Note: This file sets up global styles for the application using Tailwind CSS directives and some custom CSS for the
