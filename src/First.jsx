@@ -1,10 +1,28 @@
+import { useState, useEffect } from 'react';
+
 function First({ setCurrentPage }) {
+  const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/api/data')
+      .then((response) => response.json())
+      .then((data) => setMessage(data.message))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
   return (
     <div className="flex flex-col items-center h-screen p-5">
       {/* Top Middle Heading */}
       <h1 className="text-white text-7xl font-semibold mt-6">
         Mobile Pet Simulator 2.0
       </h1>
+
+      {/* Backend Message */}
+      {message && (
+        <p className="text-gray-300 text-xl mt-4">
+          Backend says: {message}
+        </p>
+      )}
 
       {/* Middle of Screen Button (absolute center) */}
       <button
